@@ -1,0 +1,5 @@
+---
+import { getCollection } from "astro:content";
+const entries = await getCollection("docs");
+---
+<pre>{JSON.stringify(entries.map((entry) => entry.id).sort())}</pre>
